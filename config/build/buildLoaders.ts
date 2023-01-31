@@ -1,6 +1,9 @@
 import webpack from 'webpack';
+import { BuildOptions } from './types/config';
 
-export function buildLoaders(): Array<webpack.RuleSetRule> {
+export function buildLoaders({
+  isDev,
+}: BuildOptions): Array<webpack.RuleSetRule> {
   const typeScriptLoader = {
     test: /\.tsx?$/,
     use: 'ts-loader',
