@@ -4,3 +4,12 @@
 
 @import url("./themes/dark.scss");
 @import url("./themes/normal.scss");
+
+.app {
+  min-height: 100vh;
+
+  font: var(--font-m);
+  color: var(--primary-color);
+
+  background-color: var(--bg-color);
+}
