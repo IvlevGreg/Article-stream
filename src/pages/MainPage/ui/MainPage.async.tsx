@@ -1,10 +1,11 @@
 import { lazy } from 'react';
 
 export const MainPageAsync = lazy(
-  () =>
-    new Promise((res) => {
-      // @ts-ignore
-      // Искуственная задержка загрузки для удобства разработки
-      setTimeout(() => res(import('./MainPage')), 1000);
-    })
+  async () => new Promise((res) => {
+    // @ts-expect-error
+    // Искуственная задержка загрузки для удобства разработки
+    setTimeout(() => {
+      res(import('./MainPage'));
+    }, 1000);
+  }),
 );

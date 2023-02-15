@@ -1,10 +1,11 @@
-import webpack from 'webpack';
-import { BuildOptions } from './types/config';
+import type webpack from 'webpack';
+import { type BuildOptions } from './types/config';
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 export function buildLoaders({
   isDev,
-}: BuildOptions): Array<webpack.RuleSetRule> {
+}: BuildOptions): webpack.RuleSetRule[] {
   const typeScriptLoader = {
     test: /\.tsx?$/,
     use: 'ts-loader',

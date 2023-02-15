@@ -1,16 +1,16 @@
-import path from 'path';
-import htmlWebpackPlugin from 'html-webpack-plugin';
+import HTMLWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
-import { BuildOptions } from './types/config';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import { type BuildOptions } from './types/config';
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 export function buildPlugins({
   paths,
   isDev,
-}: BuildOptions): Array<webpack.WebpackPluginInstance> {
+}: BuildOptions): webpack.WebpackPluginInstance[] {
   const plugins = [
-    new htmlWebpackPlugin({
+    new HTMLWebpackPlugin({
       template: paths.html,
     }),
     new webpack.ProgressPlugin(),

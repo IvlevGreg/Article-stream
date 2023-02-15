@@ -6,9 +6,9 @@ import { LangSwitcher } from 'widgets/LangSwitcher/LangSwitcher';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import cls from './Sidebar.module.scss';
 
-interface SidebarProps {
+type SidebarProps = {
   className?: string;
-}
+};
 
 export function Sidebar(props: SidebarProps) {
   const { className } = props;
@@ -23,7 +23,7 @@ export function Sidebar(props: SidebarProps) {
         className,
       ])}
     >
-      <Button theme={ThemeButton.CLEAR} onClick={onToggle}>
+      <Button theme={ThemeButton.CLEAR} onClick={() => onToggle}>
         toggle
       </Button>
 

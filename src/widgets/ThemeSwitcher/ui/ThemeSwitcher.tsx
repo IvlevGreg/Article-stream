@@ -1,14 +1,14 @@
-import { useTheme } from 'app/providers/ThemeProvider';
+import { useTheme, Theme } from 'app/providers/ThemeProvider';
 import { classNames } from 'shared/lib/classNames/classNames';
-import cls from './ThemeSwitcher.module.scss';
 import LightIcon from 'shared/assets/icons/theme-light.svg';
 import DarkIcon from 'shared/assets/icons/theme-dark.svg';
-import { Theme } from 'app/providers/ThemeProvider';
-import { Button, ThemeButton } from 'shared/ui';
 
-interface ThemeSwitcherProps {
+import { Button, ThemeButton } from 'shared/ui';
+import cls from './ThemeSwitcher.module.scss';
+
+type ThemeSwitcherProps = {
   className?: string;
-}
+};
 
 export function ThemeSwitcher(props: ThemeSwitcherProps) {
   const { className } = props;
