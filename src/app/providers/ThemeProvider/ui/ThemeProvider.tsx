@@ -5,7 +5,8 @@ import {
   ThemeContext,
 } from '../lib/ThemeContext';
 
-export const defaultTheme = (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme) || Theme.DARK;
+export const defaultTheme = (localStorage
+  .getItem(LOCAL_STORAGE_THEME_KEY) as Theme) || Theme.DARK;
 
 export type ThemeProviderProps = {
   children: ReactNode;
