@@ -1,10 +1,11 @@
-import webpack from 'webpack';
-import { BuildOptions } from './types/config';
+import type webpack from 'webpack';
+import { type BuildOptions } from './types/config';
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 export function buildLoaders({
   isDev,
-}: BuildOptions): Array<webpack.RuleSetRule> {
+}: BuildOptions): webpack.RuleSetRule[] {
   const typeScriptLoader = {
     test: /\.tsx?$/,
     use: 'ts-loader',
@@ -30,5 +31,40 @@ export function buildLoaders({
     ],
   };
 
-  return [typeScriptLoader, cssLoader];
+  const svgLoader = {
+    test: /\.svg$/i,
+    issuer: /\.[jt]sx?$/,
+    use: ['@svgr/webpack'],
+  };
+
+  const fileLoader = {
+    test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+    use: [
+      {
+        loader: 'file-loader',
+      },
+    ],
+  };
+
+  const babelLoader = {
+    test: /\.(js|jsx|tsx|ts)$/,
+    exclude: /node_modules/,
+    use: {
+      loader: 'babel-loader',
+      options: {
+        plugins: [
+          [
+            'i18next-extract',
+            {
+              locales: ['ru', 'en'],
+              keyAsDefaultValue: true,
+            },
+          ],
+        ],
+
+      },
+    },
+  };
+
+  return [fileLoader, cssLoader, svgLoader, babelLoader, typeScriptLoader];
 }
