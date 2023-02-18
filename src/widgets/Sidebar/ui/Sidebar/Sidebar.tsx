@@ -23,8 +23,8 @@ export function Sidebar(props: SidebarProps) {
         className,
       ])}
     >
-      <Button theme={ThemeButton.CLEAR} onClick={() => onToggle}>
-        toggle
+      <Button theme={ThemeButton.CLEAR} onClick={() => onToggle()}>
+        {'>'}
       </Button>
 
       <div className={cls.switchers}>

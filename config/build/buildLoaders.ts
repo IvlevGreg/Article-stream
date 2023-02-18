@@ -46,5 +46,25 @@ export function buildLoaders({
     ],
   };
 
-  return [typeScriptLoader, cssLoader, svgLoader, fileLoader];
+  const babelLoader = {
+    test: /\.(js|jsx|tsx|ts)$/,
+    exclude: /node_modules/,
+    use: {
+      loader: 'babel-loader',
+      options: {
+        plugins: [
+          [
+            'i18next-extract',
+            {
+              locales: ['ru', 'en'],
+              keyAsDefaultValue: true,
+            },
+          ],
+        ],
+
+      },
+    },
+  };
+
+  return [fileLoader, cssLoader, svgLoader, babelLoader, typeScriptLoader];
 }
