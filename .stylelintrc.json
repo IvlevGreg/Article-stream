@@ -1,7 +1,7 @@
 {
   "extends": "stylelint-config-standard-scss",
 	"plugins": [
-		"stylelint-order"	
+		"stylelint-order"
   ],
 	"rules": {
 		"selector-class-pattern": null,
@@ -11,7 +11,7 @@
 		"order/order": [
 			"custom-properties",
 			"dollar-variables",
-			
+
 			{
 				"type": "at-rule",
 				"name": "include",
