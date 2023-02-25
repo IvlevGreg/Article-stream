@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import i18n from 'shared/config/i18n/i18n';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ThemeButton } from 'shared/ui';
 import { LangSwitcher } from 'widgets/LangSwitcher/LangSwitcher';
@@ -12,18 +11,17 @@ type SidebarProps = {
 
 export function Sidebar(props: SidebarProps) {
   const { className } = props;
-  const [collapsed, setCollapsed] = useState(true);
+  const [collapsed, setCollapsed] = useState(false);
   function onToggle() {
-    setCollapsed(() => !collapsed);
+    setCollapsed((prev) => !prev);
   }
 
   return (
     <div
-      className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
-        className,
-      ])}
+      data-testid="sidebar"
+      className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
     >
-      <Button theme={ThemeButton.CLEAR} onClick={() => onToggle()}>
+      <Button data-testid="sidebar-toggle" theme={ThemeButton.CLEAR} onClick={() => onToggle()}>
         {'>'}
       </Button>
 
