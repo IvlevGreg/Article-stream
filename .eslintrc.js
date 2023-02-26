@@ -21,6 +21,7 @@ module.exports = {
     'react',
     '@typescript-eslint',
     'i18next',
+    'react-hooks',
   ],
   rules: {
     'linebreak-style': ['error', 'unix'],
@@ -43,6 +44,11 @@ module.exports = {
     'i18next/no-literal-string': ['error',
       { markupOnly: true, onlyAttribute: [''] }],
     'max-len': ['error', { code: 120, ignoreComments: true }],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
+    // убрать после рефакторинга
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
 
   },
   globals: {
@@ -50,9 +56,10 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/src/**/*.test.{ts,tsx}'],
+      files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
       rules: {
         'i18next/no-literal-string': 'off',
+        'max-len': 'off',
       },
     },
   ],
