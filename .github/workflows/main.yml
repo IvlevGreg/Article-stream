@@ -31,9 +31,9 @@ jobs:
       - name: unit testing
         if: always()
         run: npm run test:unit
-      - name: Publish to Chromatic
-        if: always()
-        run: npm run chromatic
+#      - name: Publish to Chromatic
+#        if: always()
+#        run: npm run chromatic
 #      - name: screenshot testing
 #        if: always()
 #        run: npm run test:ui:ci
