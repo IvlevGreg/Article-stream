@@ -64,6 +64,7 @@
     "jest": "^27.5.1",
     "json-server": "^0.17.2",
     "mini-css-extract-plugin": "^2.5.3",
+    "postcss": "^8.4.21",
     "react-refresh": "^0.14.0",
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.49.9",
