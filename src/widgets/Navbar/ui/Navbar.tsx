@@ -20,7 +20,7 @@ export const Navbar = ({ className }: NavbarProps) => {
   return (
     <div className={classNames(cls.Navbar, {}, [className])}>
       <Button
-        theme={ThemeButton.CLEAR}
+        theme={ThemeButton.CLEAR_INVERTED}
         className={cls.links}
         onClick={onToggleModal}
       >
