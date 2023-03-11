@@ -26,6 +26,7 @@ type ButtonProps = {
   theme?: ThemeButton;
   square?: boolean;
   size?: ButtonSize;
+  disabled?: boolean;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const Button: FunctionComponent<ButtonProps> = (
@@ -37,6 +38,7 @@ export const Button: FunctionComponent<ButtonProps> = (
     theme,
     square,
     size = ButtonSize.M,
+    disabled,
     ...otherProps
   } = props;
 
@@ -44,6 +46,7 @@ export const Button: FunctionComponent<ButtonProps> = (
 
   const modsOptional: Record<string, boolean> = {
     [cls.square]: square,
+    [cls.disabled]: disabled,
   };
 
   return (

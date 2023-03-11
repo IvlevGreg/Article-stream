@@ -63,3 +63,10 @@ BACKGROUND_INVERTED.args = {
   theme: ThemeButton.BACKGROUND_INVERTED,
   children: 'text',
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  theme: ThemeButton.OUTLINE,
+  disabled: true,
+  children: 'text',
+};
