@@ -34,5 +34,10 @@ export default ({ config }:{config:WebpackConfiguration}) => {
     __IS_DEV__: JSON.stringify(true),
   }));
 
+  config.resolve.modules = [
+    path.resolve(__dirname, '../../src'),
+    'node_modules',
+  ];
+
   return config;
 };
