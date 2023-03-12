@@ -1,6 +1,6 @@
 import {
   type ButtonHTMLAttributes,
-  type FunctionComponent,
+  type FunctionComponent, memo,
   type PropsWithChildren,
 } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -29,7 +29,7 @@ type ButtonProps = {
   disabled?: boolean;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const Button: FunctionComponent<ButtonProps> = (
+export const Button: FunctionComponent<ButtonProps> = memo((
   props: PropsWithChildren<ButtonProps>,
 ) => {
   const {
@@ -58,4 +58,4 @@ export const Button: FunctionComponent<ButtonProps> = (
       {children}
     </button>
   );
-};
+});

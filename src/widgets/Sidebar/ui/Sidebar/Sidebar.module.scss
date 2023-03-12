@@ -1,6 +1,5 @@
 .Sidebar {
   position: relative;
-  padding: 15px 5px;
   width: var(--sidebar-width);
   height: calc(100vh - var(--navbar-height));
   background: var(--inverted-bg-color);
@@ -9,35 +8,28 @@
 
 .switchers {
   position: absolute;
-  left: 0;
   bottom: 20px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
-  gap: 10px;
 }
 
-.btn {
+.lang {
+  margin-left: 20px;
+}
+
+.collapseBtn {
   position: absolute;
   right: 1px;
   bottom: 50%;
   transform: translateX(100%);
 }
 
-.icon {
-  fill: var(--inverted-primary-color);
-}
-
-.item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
 .items {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  margin-top: 20px;
+  margin-left: 30px;
 }
 
 .collapsed {
@@ -50,11 +42,5 @@
 
   .lang {
     margin-left: 0;
-  }
-
-  .link {
-    width: 0;
-    opacity: 0;
-    transition: 0.2s opacity;
   }
 }
