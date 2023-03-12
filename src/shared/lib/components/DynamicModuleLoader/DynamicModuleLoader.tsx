@@ -1,5 +1,4 @@
 import { FC, useEffect } from 'react';
-import { loginReducer } from 'feature/AuthByUsername/model/slice/loginSlice';
 import { useDispatch, useStore } from 'react-redux';
 import { ReduxStoreWithManager } from 'app/providers/StoreProvider';
 import { StateSchemaKey } from 'app/providers/StoreProvider/config/StateSchema';
@@ -23,7 +22,7 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = ({
 
   useEffect(() => {
     Object.entries(reducers).forEach(([name]:ReducersListEntry) => {
-      store.reducerManager.add(name, loginReducer);
+      store.reducerManager.add(name, reducers[name]);
       dispatch({ type: `@INIT ${name} reducer` });
     });
 
