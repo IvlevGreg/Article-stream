@@ -13,7 +13,7 @@ import cls from './Sidebar.module.scss';
 interface SidebarProps {
   className?: string;
 }
-
+// TODO: пофиксить стили
 export const Sidebar = memo(({ className }: SidebarProps) => {
   const [collapsed, setCollapsed] = useState(false);
 
@@ -39,6 +39,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
       <div className={cls.items}>
         {SidebarItemsList.map((item) => <SidebarItem key={item.path} item={item} collapsed={collapsed} />)}
       </div>
+
       <div className={cls.switchers}>
         <ThemeSwitcher />
         <LangSwitcher

@@ -30,8 +30,10 @@ export default ({ config }:{config:WebpackConfiguration}) => {
     use: ['@svgr/webpack'],
   });
 
+  // TODO: выделить отдельно
   config.plugins.push(new webpack.DefinePlugin({
     __IS_DEV__: JSON.stringify(true),
+    __API__: JSON.stringify(''),
   }));
 
   config.resolve.modules = [
