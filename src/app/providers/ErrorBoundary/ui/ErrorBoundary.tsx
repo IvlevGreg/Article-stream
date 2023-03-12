@@ -1,5 +1,4 @@
 import React, { ErrorInfo, ReactNode, Suspense } from 'react';
-import { withTranslation } from 'react-i18next';
 import { PageError } from 'widgets/PageError/ui/PageError';
 
 interface ErrorBoundaryProps {
@@ -16,6 +15,7 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
     this.state = { hasError: false };
   }
 
+  // eslint-disable-next-line
   static getDerivedStateFromError(error: Error) {
     // Update state so the next render will show the fallback UI.
     return { hasError: true };

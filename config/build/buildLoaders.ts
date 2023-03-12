@@ -1,8 +1,8 @@
 import type webpack from 'webpack';
 import { buildCssLoader } from './loaders/buildCssLoaders';
 import { type BuildOptions } from './types/config';
-
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// TODO: Проверить что плагин нужен MiniCssExtractPlugin
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 export function buildLoaders({
   isDev,
