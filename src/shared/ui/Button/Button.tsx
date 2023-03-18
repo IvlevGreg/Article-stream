@@ -35,7 +35,7 @@ export const Button: FunctionComponent<ButtonProps> = memo((
   const {
     className,
     children,
-    theme,
+    theme = ThemeButton.OUTLINE,
     square,
     size = ButtonSize.M,
     disabled,
@@ -44,7 +44,7 @@ export const Button: FunctionComponent<ButtonProps> = memo((
 
   const mods = [cls[theme], cls[size]];
 
-  const modsOptional: Record<string, boolean> = {
+  const modsOptional: Record<string, boolean | undefined> = {
     [cls.square]: square,
     [cls.disabled]: disabled,
   };

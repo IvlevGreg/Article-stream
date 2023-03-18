@@ -33,6 +33,7 @@ module.exports = {
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'no-unused-vars': 0,
+    'no-undef': 0,
     '@typescript-eslint/no-unused-vars': [2, { argsIgnorePattern: '^_' }],
     'no-console': 'warn',
     'react/require-default-props': 'off',

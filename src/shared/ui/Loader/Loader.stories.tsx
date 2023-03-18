@@ -16,5 +16,4 @@ const Template: ComponentStory<typeof Loader> = (args) => <Loader {...args} />;
 
 export const Base = Template.bind({});
 Base.args = {
-  children: 'text',
 };

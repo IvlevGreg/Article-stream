@@ -11,32 +11,34 @@ export default ({ config }:{config:WebpackConfiguration}) => {
     entry: '',
     src: path.resolve(__dirname, '..', '..', 'src'),
   };
-  config.resolve.modules.push(paths.src);
-  config.resolve.extensions.push('.ts', '.tsx');
+  config.resolve!.modules!.push(paths.src);
+  config.resolve!.extensions!.push('.ts', '.tsx');
 
-  config.module.rules.push(buildCssLoader(true));
-
+  const rules = config.module!.rules as RuleSetRule[];
   // eslint-disable-next-line no-param-reassign
-  config.module.rules = config.module.rules.map((rule: RuleSetRule) => {
+  config.module!.rules = rules.map((rule: RuleSetRule) => {
     if (rule.test instanceof RegExp && rule.test.toString().includes('svg')) {
       return { ...rule, exclude: /\.svg$/i };
     }
 
     return rule;
   });
-  config.module.rules.push({
+
+  rules.push(buildCssLoader(true));
+
+  rules.push({
     test: /\.svg$/i,
     issuer: /\.[jt]sx?$/,
     use: ['@svgr/webpack'],
   });
 
   // TODO: выделить отдельно
-  config.plugins.push(new webpack.DefinePlugin({
+  config.plugins!.push(new webpack.DefinePlugin({
     __IS_DEV__: JSON.stringify(true),
     __API__: JSON.stringify(''),
   }));
 
-  config.resolve.modules = [
+  config.resolve!.modules = [
     path.resolve(__dirname, '../../src'),
     'node_modules',
   ];
