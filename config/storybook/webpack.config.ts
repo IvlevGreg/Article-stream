@@ -14,9 +14,9 @@ export default ({ config }:{config:WebpackConfiguration}) => {
   config.resolve!.modules!.push(paths.src);
   config.resolve!.extensions!.push('.ts', '.tsx');
 
-  const rules = config.module!.rules as RuleSetRule[];
   // eslint-disable-next-line no-param-reassign
-  config.module!.rules = rules.map((rule: RuleSetRule) => {
+  // @ts-ignore
+  config.module!.rules = config.module!.rules!.map((rule: RuleSetRule) => {
     if (rule.test instanceof RegExp && rule.test.toString().includes('svg')) {
       return { ...rule, exclude: /\.svg$/i };
     }
@@ -24,9 +24,9 @@ export default ({ config }:{config:WebpackConfiguration}) => {
     return rule;
   });
 
-  rules.push(buildCssLoader(true));
+  config.module!.rules.push(buildCssLoader(true));
 
-  rules.push({
+  config.module!.rules.push({
     test: /\.svg$/i,
     issuer: /\.[jt]sx?$/,
     use: ['@svgr/webpack'],
