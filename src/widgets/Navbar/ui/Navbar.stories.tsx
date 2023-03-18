@@ -22,5 +22,10 @@ Base.decorators = [StoreDecorator({
 export const authUser = Template.bind({});
 authUser.args = {};
 authUser.decorators = [StoreDecorator({
-  user: { authData: {} },
+  user: {
+    authData: {
+      id: '123',
+      username: '123',
+    },
+  },
 })];
