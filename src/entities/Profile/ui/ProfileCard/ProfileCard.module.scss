@@ -3,18 +3,31 @@
   padding: 20px;
 }
 
-.header {
+.container {
   display: flex;
-}
-
-.editBtn {
-  margin-left: auto;
-}
-
-.data {
-  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
 }
 
 .input {
   margin-top: 10px;
+}
+
+.loading,
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.avatarWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.editing {
+  border: 2px solid var(--inverted-primary-color);
 }
