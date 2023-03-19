@@ -14,6 +14,11 @@ declare module '*.jpeg' {
   export default value;
 }
 
+declare module '*.jpg' {
+  const value: string;
+  export default value;
+}
+
 declare module '*.pjpg' {
   const value: string;
   export default value;
