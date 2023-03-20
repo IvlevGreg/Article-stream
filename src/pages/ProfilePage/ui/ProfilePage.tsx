@@ -5,7 +5,7 @@ import {
   getProfileForm,
   getProfileIsLoading,
   getProfileValidateErrors,
-  getProfilleReadonly,
+  getProfileReadonly,
   profileActions,
   ProfileCard,
   profileReducer,
@@ -66,7 +66,7 @@ export default function ProfilePage() {
   const formData = useSelector(getProfileForm);
   const isLoading = useSelector(getProfileIsLoading);
   const error = useSelector(getProfileError);
-  const readonly = useSelector(getProfilleReadonly);
+  const readonly = useSelector(getProfileReadonly);
   const validateErrors = useSelector(getProfileValidateErrors);
 
   const validateErrorTranslates = {

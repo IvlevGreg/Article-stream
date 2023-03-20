@@ -2,7 +2,7 @@ import { Button, Text, ThemeButton } from 'shared/ui';
 import { useTranslation } from 'react-i18next';
 import { FC, useCallback } from 'react';
 import { useSelector } from 'react-redux';
-import { getProfilleReadonly, profileActions, updateProfileData } from 'entities/Profile';
+import { getProfileReadonly, profileActions, updateProfileData } from 'entities/Profile';
 import { useAppDispatch } from 'shared/lib/hooks';
 import cls from './ProfilePageHeader.module.scss';
 
@@ -25,7 +25,7 @@ export const ProfilePageHeader: FC<ProfilePageHeaderProps> = () => {
     dispatch(updateProfileData());
   }, [dispatch]);
 
-  const readonly = useSelector(getProfilleReadonly);
+  const readonly = useSelector(getProfileReadonly);
   return (
     <div className={cls.ProfilePageHeader}>
       <Text title={t('Профиль')} />
