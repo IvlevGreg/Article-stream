@@ -5,7 +5,6 @@ import i18nForTests from 'shared/config/i18n/i18nForTests';
 import { MemoryRouter } from 'react-router-dom';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 import { ErrorBoundary } from 'app/providers/ErrorBoundary';
-import { DeepPartial } from '@reduxjs/toolkit';
 
 export interface componentRenderOptions {
     route?: string;

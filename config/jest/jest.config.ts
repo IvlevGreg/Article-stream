@@ -38,9 +38,9 @@ export default {
     '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
   },
   globals: {
-    __DEV__: true,
     __IS_DEV__: true,
     __API__: true,
+    __PROJECT__: 'jest',
   },
 
   // All imported modules in your tests should be mocked automatically
