@@ -1,8 +1,9 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import ProfilePage from 'pages/ProfilePage/ui/ProfilePage';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import ProfilePage from './ProfilePage';
+import { Country } from 'entities/Country';
+import { Currency } from 'entities/Currency';
 
 export default {
   title: 'pages/ProfilePage',
@@ -14,5 +15,19 @@ export default {
 
 const Template: ComponentStory<typeof ProfilePage> = () => <ProfilePage />;
 
-export const Base = Template.bind({});
-Base.decorators = [StoreDecorator({})];
+export const Normal = Template.bind({});
+Normal.args = {};
+Normal.decorators = [StoreDecorator({
+  profile: {
+    form: {
+      username: 'admin',
+      age: 24,
+      country: Country.Russia,
+      lastname: 'Greg',
+      first: 'Ivlev',
+      city: 'Moscow',
+      currency: Currency.RUB,
+    },
+
+  },
+})];
