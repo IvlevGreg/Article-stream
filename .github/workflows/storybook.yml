@@ -1,4 +1,4 @@
-name: linting, testing, building
+name: storybook
 on:
   push
   pull_request
