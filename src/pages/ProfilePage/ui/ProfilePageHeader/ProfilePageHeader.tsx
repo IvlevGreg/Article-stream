@@ -10,7 +10,7 @@ export interface ProfilePageHeaderProps {
 }
 
 export const ProfilePageHeader: FC<ProfilePageHeaderProps> = () => {
-  const { t } = useTranslation('main');
+  const { t } = useTranslation('profile');
   const dispatch = useAppDispatch();
 
   const onEdit = useCallback(() => {

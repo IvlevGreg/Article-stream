@@ -31,11 +31,12 @@ export class TestAsyncThunk<Return, Arg, RejecteValue> {
 
   async callThunk(arg: Arg) {
     const action = this.actionCreator(arg);
-    const res = await action(this.dispatch, this.getState, {
-      api: this.api,
-      navigate: this.navigate,
-    });
+    const result = await action(
+      this.dispatch,
+      this.getState,
+      { api: this.api, navigate: this.navigate },
+    );
 
-    return res;
+    return result;
   }
 }

@@ -9,16 +9,16 @@ import './app/styles/index.scss';
 import './shared/config/i18n/i18n';
 
 render(
-  <ErrorBoundary>
-    <BrowserRouter>
+  <BrowserRouter>
+    <ErrorBoundary>
       <StoreProvider>
         <ThemeProvider>
           <App />
         </ThemeProvider>
 
       </StoreProvider>
-    </BrowserRouter>
-  </ErrorBoundary>,
+    </ErrorBoundary>
+  </BrowserRouter>,
 
   document.getElementById('root'),
 );

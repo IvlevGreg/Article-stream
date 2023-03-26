@@ -15,9 +15,9 @@ export const parameters = {
     },
   },
   themes: {
-    default: Theme.LIGTH,
+    default: Theme.LIGHT,
     list: [
-      { name: Theme.LIGTH, class: Theme.LIGTH, color: '#fff' },
+      { name: Theme.LIGHT, class: Theme.LIGHT, color: '#fff' },
       { name: Theme.DARK, class: Theme.DARK, color: '#3b5998' },
     ],
   },
