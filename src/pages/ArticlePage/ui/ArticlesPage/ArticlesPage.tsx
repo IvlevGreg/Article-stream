@@ -7,10 +7,10 @@ export interface ArticlesPageProps {
   className?: string;
 }
 
-const ArticlesPage: FC<ArticlesPageProps> = ({ className }) => {
+const ArticlesPage: FC<ArticlesPageProps> = () => {
   const { t } = useTranslation('article');
   return (
-    <div>Articles Page</div>
+    <div className={cls.ArticlesPage}>Articles Page</div>
   );
 };
 export default memo(ArticlesPage);

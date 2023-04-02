@@ -1,7 +1,8 @@
 .Sidebar {
   position: relative;
+  flex-shrink: 0;
   width: var(--sidebar-width);
-  height: calc(100vh - var(--navbar-height));
+ height: calc(100vh - var(--navbar-height));
   background: var(--inverted-bg-color);
   transition: width 0.3s;
 }
@@ -20,9 +21,9 @@
 
 .collapseBtn {
   position: absolute;
-  right: 1px;
+  right: 0;
   bottom: 50%;
-  transform: translateX(100%);
+  transform: translateX(00%);
 }
 
 .items {

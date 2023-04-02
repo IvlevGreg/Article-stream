@@ -9,6 +9,7 @@ import { ProfileSchema } from 'entities/Profile';
 import { To } from '@remix-run/router';
 import { NavigateOptions } from 'react-router/dist/lib/context';
 import { AxiosInstance } from 'axios';
+import { ArticleDetailsSchema } from 'entities/Article';
 
 export interface CounterState {
   value: number;
@@ -20,6 +21,7 @@ export interface StateSchema {
   // Асинхронные редьюсеры
   loginForm?:LoginSchema;
   profile?:ProfileSchema;
+  articleDetails?:ArticleDetailsSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema
