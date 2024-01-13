@@ -1,6 +1,5 @@
 import { ArticleImageBlock } from 'entities/Article/model/types/article';
 import { Text, TextAlign } from 'shared/ui';
-import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 

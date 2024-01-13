@@ -1,7 +1,7 @@
 .Button {
   color: var(--primary-color);
-  cursor: pointer;
   transition: opacity 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.8;

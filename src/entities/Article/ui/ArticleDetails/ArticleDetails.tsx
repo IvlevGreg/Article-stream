@@ -1,7 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import {
-  FC, memo, useCallback, useEffect,
-} from 'react';
+import { FC, useCallback, useEffect } from 'react';
 
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks';
@@ -12,7 +10,7 @@ import {
   getArticleDetailsIsLoading,
 } from 'entities/Article/model/selectors/articleDetails';
 import {
-  TextAlign, TextSize, Icon, Avatar, Skeleton, Text,
+  Avatar, Icon, Skeleton, Text, TextAlign, TextSize,
 } from 'shared/ui';
 import { classNames } from 'shared/lib/classNames/classNames';
 import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
