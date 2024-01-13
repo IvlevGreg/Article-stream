@@ -1,7 +1,7 @@
 ## About:
 
-Dynamic web platform tailored for article enthusiasts. Whether you're an avid reader or an aspiring writer, Expressely
-caters to all.
+Article-stream it's dynamic web platform tailored for article enthusiasts. Whether you're an avid reader or an aspiring writer, Expressely
+caters to all. (still in progress)
 
 ### Features:
 
