@@ -81,11 +81,32 @@ export const ArticleDetails: FC<ArticleDetailsProps> = ({ className, id }) => {
   if (isLoading) {
     content = (
       <>
-        <Skeleton className={cls.avatar} width={200} height={200} border="50%" />
-        <Skeleton className={cls.title} width={300} height={32} />
-        <Skeleton className={cls.skeleton} width={600} height={24} />
-        <Skeleton className={cls.skeleton} width="100%" height={200} />
-        <Skeleton className={cls.skeleton} width="100%" height={200} />
+        <Skeleton
+          className={cls.avatar}
+          width={200}
+          height={200}
+          border="50%"
+        />
+        <Skeleton
+          className={cls.title}
+          width={300}
+          height={32}
+        />
+        <Skeleton
+          className={cls.skeleton}
+          width={600}
+          height={24}
+        />
+        <Skeleton
+          className={cls.skeleton}
+          width="100%"
+          height={200}
+        />
+        <Skeleton
+          className={cls.skeleton}
+          width="100%"
+          height={200}
+        />
       </>
     );
   } else if (error) {
@@ -112,11 +133,17 @@ export const ArticleDetails: FC<ArticleDetailsProps> = ({ className, id }) => {
           size={TextSize.L}
         />
         <div className={cls.articleInfo}>
-          <Icon className={cls.icon} Svg={EyeIcon} />
+          <Icon
+            className={cls.icon}
+            Svg={EyeIcon}
+          />
           <Text text={String(article?.views)} />
         </div>
         <div className={cls.articleInfo}>
-          <Icon className={cls.icon} Svg={CalendarIcon} />
+          <Icon
+            className={cls.icon}
+            Svg={CalendarIcon}
+          />
           <Text text={article?.createdAt} />
         </div>
         {article?.blocks.map(renderBlock)}

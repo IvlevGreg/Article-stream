@@ -28,7 +28,11 @@ export function BugButton(props: BugButtonProps) {
   }, [error]);
 
   return (
-    <Button theme={ThemeButton.CLEAR} onClick={() => toggleError()} className={className}>
+    <Button
+      theme={ThemeButton.CLEAR}
+      onClick={() => toggleError()}
+      className={className}
+    >
       {t('Бросить ошибку')}
     </Button>
   );
