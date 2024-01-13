@@ -1,7 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import {
-  FC, memo, useCallback, useEffect,
-} from 'react';
+import { FC, useCallback, useEffect } from 'react';
 
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks';
@@ -12,7 +10,7 @@ import {
   getArticleDetailsIsLoading,
 } from 'entities/Article/model/selectors/articleDetails';
 import {
-  TextAlign, TextSize, Icon, Avatar, Skeleton, Text,
+  Avatar, Icon, Skeleton, Text, TextAlign, TextSize,
 } from 'shared/ui';
 import { classNames } from 'shared/lib/classNames/classNames';
 import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
@@ -83,11 +81,32 @@ export const ArticleDetails: FC<ArticleDetailsProps> = ({ className, id }) => {
   if (isLoading) {
     content = (
       <>
-        <Skeleton className={cls.avatar} width={200} height={200} border="50%" />
-        <Skeleton className={cls.title} width={300} height={32} />
-        <Skeleton className={cls.skeleton} width={600} height={24} />
-        <Skeleton className={cls.skeleton} width="100%" height={200} />
-        <Skeleton className={cls.skeleton} width="100%" height={200} />
+        <Skeleton
+          className={cls.avatar}
+          width={200}
+          height={200}
+          border="50%"
+        />
+        <Skeleton
+          className={cls.title}
+          width={300}
+          height={32}
+        />
+        <Skeleton
+          className={cls.skeleton}
+          width={600}
+          height={24}
+        />
+        <Skeleton
+          className={cls.skeleton}
+          width="100%"
+          height={200}
+        />
+        <Skeleton
+          className={cls.skeleton}
+          width="100%"
+          height={200}
+        />
       </>
     );
   } else if (error) {
@@ -114,11 +133,17 @@ export const ArticleDetails: FC<ArticleDetailsProps> = ({ className, id }) => {
           size={TextSize.L}
         />
         <div className={cls.articleInfo}>
-          <Icon className={cls.icon} Svg={EyeIcon} />
+          <Icon
+            className={cls.icon}
+            Svg={EyeIcon}
+          />
           <Text text={String(article?.views)} />
         </div>
         <div className={cls.articleInfo}>
-          <Icon className={cls.icon} Svg={CalendarIcon} />
+          <Icon
+            className={cls.icon}
+            Svg={CalendarIcon}
+          />
           <Text text={article?.createdAt} />
         </div>
         {article?.blocks.map(renderBlock)}

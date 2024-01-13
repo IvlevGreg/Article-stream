@@ -8,6 +8,7 @@ module.exports = {
     'plugin:react/recommended',
     'airbnb',
     'plugin:i18next/recommended',
+    'plugin:css-modules/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -22,6 +23,7 @@ module.exports = {
     '@typescript-eslint',
     'i18next',
     'react-hooks',
+    'css-modules',
   ],
   rules: {
     'linebreak-style': ['error', 'unix'],
@@ -34,6 +36,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'no-unused-vars': 0,
     'no-undef': 0,
+    'react/jsx-max-props-per-line': [2, { maximum: 1, when: 'always' }],
     '@typescript-eslint/no-unused-vars': [2, { argsIgnorePattern: '^_' }],
     'no-console': 'warn',
     'react/require-default-props': 'off',
@@ -53,6 +56,26 @@ module.exports = {
     'jsx-a11y/no-static-element-interactions': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'no-param-reassign': 'off',
+
+    // TODO: отрефачить и перевести на ошибку
+    'css-modules/no-unused-class': [1, { camelCase: true }],
+    'css-modules/no-undef-class': [1, { camelCase: true }],
+
+    'no-undef-init': 'off',
+    '@typescript-eslint/consistent-type-imports': 'off',
+    'max-statements': 'off',
+    'arrow-body-style': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    'react/jsx-handler-names': 'off',
+
+    '@typescript-eslint/no-invalid-void-type': 'off',
+    '@typescript-eslint/no-namespace': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    'eslint-comments/disable-enable-pair': 0,
+    'eslint-comments/no-unlimited-disable': 0,
+    'max-nested-callbacks': ['error', 7], // was extends for tests only
+    '@typescript-eslint/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
   },
   globals: {
     __IS_DEV__: true,

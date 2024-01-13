@@ -78,10 +78,17 @@ export default function ProfilePage() {
   };
 
   return (
-    <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+    <DynamicModuleLoader
+      reducers={reducers}
+      removeAfterUnmount
+    >
       <ProfilePageHeader />
       {validateErrors?.length && validateErrors.map((err) => (
-        <Text theme={TextTheme.ERROR} text={validateErrorTranslates[err]} key={err} />
+        <Text
+          theme={TextTheme.ERROR}
+          text={validateErrorTranslates[err]}
+          key={err}
+        />
       ))}
       <div>
 
