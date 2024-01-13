@@ -22,19 +22,20 @@ caters to all.
 
 ### Summary:
 
-1. **Feature-Sliced Design:** Organized codebase following the feature-sliced design pattern for maintainability and
+1. 🧱 **Feature-Sliced Design:** Organized codebase following the feature-sliced design pattern for maintainability and
    scalability.
-2. **React + TypeScript:** Developed using functional components and hooks with TypeScript for type safety.
-3. **State Management**: Redux Toolkit, Redux Thunk and RTK Query for efficient data fetching and caching.
-4. **Forms and Validation:** Integrated with React Hook Form.
-5. **Lazy Loading:** Implemented lazy loading for pages, modals, and reducers for optimized performance and quicker
+2. 🇹 **React + TypeScript:** Developed using functional components and hooks with TypeScript for type safety.
+3. ⚛ **State Management**: Redux Toolkit, Redux Thunk and RTK Query for efficient data fetching and caching.
+4. 📑 **Forms and Validation:** Integrated with React Hook Form.
+5. 🐌 **Lazy Loading:** Implemented lazy loading for pages, modals, and reducers for optimized performance and quicker
    initial load times.
-6. **Theming and Localization:** Includes multiple color themes and internalization support using i18n.
-7. **Virtualization:** Implemented virtualization of articles list using Intersection Observer for efficient rendering.
-8. **Webpack:** Configured for optimizing, bundling, and managing assets and dependencies.
-9. **Storybook:** Utilized for building UI components in isolation, documenting selected shared components
-10. **Testing:** Utilized Jest with React Testing Library (RTL) for unit testing, and Cypress for end-to-end testing.
-11. **CI/CD:** Automation with Continuous Integration/Continuous Deployment pipeline for every commit.
+6. ✨ **Theming and Localization:** Includes multiple color themes and internalization support using i18n.
+7. ✍ **Virtualization:** Implemented virtualization of articles list using Intersection Observer for efficient
+   rendering.
+8. 📦 **Webpack:** Configured for optimizing, bundling, and managing assets and dependencies.
+9. 📕 **Storybook:** Utilized for building UI components in isolation, documenting selected shared components
+10. 🔎 **Testing:** Utilized Jest with React Testing Library (RTL) for unit testing, and Cypress for end-to-end testing.
+11. 🌐 **CI/CD:** Automation with Continuous Integration/Continuous Deployment pipeline for every commit.
 
 ---
 
