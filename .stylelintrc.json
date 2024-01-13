@@ -4,6 +4,7 @@
 		"stylelint-order"
   ],
 	"rules": {
+		"custom-property-empty-line-before": null,
 		"selector-class-pattern": null,
 		"indentation": [2],
 		"no-empty-source":null,
